@@ -137,7 +137,12 @@ header #account {
   position: relative;
 }
 
-#intro-content h1 {
+.intro-features-content {
+  width: 100%;
+  height: auto;
+}
+
+.intro-features-content h1 {
   display: inline-block;
   float: left;
   font-size: 72px;
@@ -147,7 +152,7 @@ header #account {
   margin-top: 120px;
 }
 
-#intro-content p {
+.intro-features-content p {
   display: inline-block;
   float: left;
   clear: left;
@@ -166,9 +171,10 @@ header #account {
   border-radius: 30px;
 }
 
-#intro-content .shortly-link-form {
+#intro-content #shortly-link-form {
   position: absolute;
-  padding: 50px;
+  padding: 50px 50px 0px 50px;
+  min-height: 118px;
   left: 0;
   bottom: calc(-168px / 2);
   background-color: hsl(257, 27%, 26%);
@@ -180,9 +186,8 @@ header #account {
   width: calc(100% - 100px);
 }
 
-.shortly-link-form input[type=text] {
+#shortly-link-form input[type=text] {
     padding: 20px;
-    border: 3px solid hsl(257, 27%, 26%);
     float: left;
     height: calc(68px - 40px - 6px);
     width: calc(770px - 40px - 6px);
@@ -190,11 +195,11 @@ header #account {
     border-radius: 10px;
 }
 
-.shortly-link-form input[type=text]:focus {
+#shortly-link-form input[type=text]:focus {
   outline: none;
 }
 
-.shortly-link-form button {
+#shortly-link-form button {
   float: right;
   width: calc(100% - 770px - 20px);
   height: 68px;
@@ -204,6 +209,30 @@ header #account {
   outline: none;
 }
 
+#shortly-link-form #input-error-message{
+  color: hsl(0, 87%, 67%);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+  display: inline-block;
+  float: left;
+  font-style: italic;
+}
+
+.normal-input {
+  border: 3px solid hsl(257, 27%, 26%);
+}
+
+.error-input {
+  border: 3px solid hsl(0, 87%, 67%);
+}
+
+.error-input::placeholder {
+  color: hsl(0, 87%, 67%);
+}
+
+
+
 /*--LINK-SHORTEN-END---------------------------------------------------------*/
 /*--INTRO-SERVICE-SECTION-START---------------------------------------------------------*/
 #intro-service-section {
@@ -211,7 +240,7 @@ header #account {
 }
 
 .service-introduce-content {
-  margin-top: 215px;
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -438,6 +467,82 @@ footer .share-nav {
 }
 
 /*--FOOTER-END---------------------------------------------------------*/
+
+
+/*--SHORTEN-RESULT-START---------------------------------------------------------*/
+#results-list-box {
+  margin-top: 110px;
+  min-height: 1px;
+  overflow: auto;
+}
+
+#results-list-box ul {
+  display: block;
+  list-style-type: none;
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#results-list-box ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 15px 0 0 0;
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+.result-box {
+  padding: 15px 30px;
+  width: calc(100% - 60px);
+  overflow: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.result-box p {
+  display: block;
+  padding: 6px 0px;
+  font-weight: 500;
+}
+
+.result-box .original-link {
+  float: left;
+}
+
+.result-box .copy-result-box {
+  float: right;
+}
+
+.copy-result-box .shorten-link {
+  float: left;
+  margin-right: 25px;
+  color: hsl(180, 66%, 49%);
+}
+
+.copy-result-box .btn-copy {
+  width: 100px;
+  padding: 9px 0px;
+  border-radius: 5px;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.copied {
+  background-color: hsl(257, 27%, 26%);
+}
+
+.copied:hover {
+  background-color: hsl(257, 27%, 26%);
+}
+
+/*--SHORTEN-RESULT-END---------------------------------------------------------*/
 
 /*
 ### Primary
