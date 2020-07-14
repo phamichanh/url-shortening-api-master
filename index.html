@@ -7,10 +7,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index-styles.css" >
+  <script src="js/index-script.js"></script>
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
 </head>
-<body>
+<body onload="loadListLinksFromCookie()">
   <header>
     <article class="main-view">
       <img id="logo-header" alt="Shortly logo" src="images/logo.svg" />
@@ -99,7 +100,6 @@
     </article>
   </section>
 
-
   <footer>
     <article class="main-view">
       <img id="logo-footer" alt="Shortly logo" src="images/logo-footer.svg" />
@@ -147,115 +147,5 @@
     </div>
   </footer>
 
-  <script>
-
-  function shortenLink() {
-    var xhr = new XMLHttpRequest();
-    var apiUrl = "https://rel.ink/api/links/";
-    xhr.open("POST", apiUrl, true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 201) {
-          var json = JSON.parse(xhr.responseText);
-          addResult(json.url, "https://rel.ink/" + json.hashid);
-        }
-    };
-
-    var originalLink = document.getElementById("inputLink");
-    var error = checkInputLink(originalLink.value);
-    if(error === 0) {
-      showError("", false);
-      var data = JSON.stringify({"url": originalLink.value});
-      xhr.send(data);
-      originalLink.value = "";
-    } else {
-      showError(error, true);
-    }
-  }
-
-  function addResult(originalLink, shortenLink) {
-    var resultsList = document.getElementById("shorten-links-list");
-    var numOfList = resultsList.getElementsByTagName("li").length + 1;
-    var shortenLinkID = "shortenLink-" + numOfList;
-    var copyBtnID = "copyBtn-" + numOfList;
-
-    var newItem = document.createElement("LI");
-    var content = document.getElementById('result-template').content;
-    var originalLinkText = content.querySelector('.original-link');
-    var shortenLinkText = content.querySelector('.shorten-link');
-    var copyButton = content.querySelector('.btn-copy');
-
-    originalLinkText.textContent = originalLink;
-    shortenLinkText.textContent = shortenLink;
-    shortenLinkText.setAttribute("id", shortenLinkID);
-    copyButton.setAttribute("id", copyBtnID);
-    copyButton.setAttribute("onclick", "copyShortenLink('" + numOfList + "')\;");
-
-    newItem.appendChild(document.importNode(content, true));
-
-    resultsList.insertBefore(newItem, resultsList.childNodes[0]);
-  }
-
-  function showError(errorMessage, isError) {
-    document.getElementById('input-error-message').textContent = errorMessage;
-    var inputTextbox = document.getElementById("inputLink");
-    if(isError) {
-      inputTextbox.classList.remove("normal-input");
-      inputTextbox.classList.add("error-input");
-    } else {
-      inputTextbox.classList.remove("error-input");
-      inputTextbox.classList.add("normal-input");
-    }
-    inputTextbox.focus();
-  }
-
-  function checkInputLink(originalLink) {
-    if(originalLink == "") {
-      return "Please add a link";
-    } else if (!validateUlr(originalLink)) {
-      return "Invalid URL, please use this format: \"https://www.example.com\"";
-    }
-    return 0;
-  }
-
-  function validateUlr(url) {
-    const regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
-    const result = url.match(regex);
-    if (result) {
-      return true;
-    }
-    return false;
-  }
-
-  function copyShortenLink(copyID) {
-    var shortenLinkID = "shortenLink-" + copyID;
-    var copyBtnID = "copyBtn-" + copyID;
-
-    var text = document.getElementById(shortenLinkID).innerText;
-    var elem = document.createElement("textarea");
-    document.body.appendChild(elem);
-    elem.value = text;
-    elem.select();
-    elem.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    document.body.removeChild(elem);
-
-    resetCopyButton(copyBtnID);
-  }
-
-  function resetCopyButton(clickedBtnID) {
-    var i;
-    var listButtons = document.getElementsByClassName("btn-copy");
-    for (i = 0; i < listButtons.length; i++) {
-       listButtons[i].textContent = "Copy";
-       listButtons[i].classList.remove("copied");
-    }
-
-    var clickedBtn = document.getElementById(clickedBtnID);
-    clickedBtn.textContent = "Copied!";
-    clickedBtn.classList.add("copied");
-  }
-
-  </script>
 </body>
 </html>
