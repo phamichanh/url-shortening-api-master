@@ -27,14 +27,6 @@ a {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For Mobile (max 768px) */
-}
-
-@media only screen and (min-width: 769px) {
-  /* For small device/tablets and larger (min 769px) */
-}
-
 header, section, footer {
   width: 100%;
   height: auto;
@@ -42,7 +34,6 @@ header, section, footer {
 }
 
 .main-view {
-  width: 1110px;
   height: auto;
   margin: 0 auto;
 }
@@ -62,14 +53,11 @@ header, section, footer {
 
 /*--HEADER-START---------------------------------------------------------*/
 header {
-  height: 40px;
-  padding: 40px 0;
+  /* Responsive  */
 }
 
 header #logo-header {
   float: left;
-  margin-right: 45px;
-  margin-top: 10px;
 }
 
 header #nav-header {
@@ -79,20 +67,15 @@ header #nav-header {
 #nav-header ul {
   list-style-type: none;
   float: left;
-  padding: 10px 0px;
-  margin: 0px;
 }
 
 #nav-header ul li {
   display: block;
   float: left;
-  margin-right: 30px;
 }
 
 #nav-header ul li a {
-  font-size: 14px;
-  font-weight: 700;
-  color: hsl(257, 7%, 63%);
+  /* Responsive */
 }
 
 #nav-header ul li a:hover {
@@ -100,15 +83,11 @@ header #nav-header {
 }
 
 header #account {
-  float: right;
-  font-size: 14px;
   font-weight: 700;
 }
 
 #account .btn-login {
   float: left;
-  padding: 10px 40px;
-  color: hsl(257, 7%, 63%);
 }
 
 #account .btn-login:hover {
@@ -117,19 +96,14 @@ header #account {
 
 #account .btn-sign-up {
   float: left;
-  padding: 10px 25px;
-  border-radius: 20px;
 }
 
 /*--HEADER-END---------------------------------------------------------*/
 
 /*--LINK-SHORTEN-START---------------------------------------------------------*/
 #link-shorten-section {
-  height: 670px;
   background-image: url("../images/illustration-working.svg");
   background-repeat: no-repeat;
-  background-position-x: 830px;
-  background-position-y: 45px;
 }
 
 #intro-content {
@@ -145,52 +119,39 @@ header #account {
 .intro-features-content h1 {
   display: inline-block;
   float: left;
-  font-size: 72px;
-  line-height: 84px;
   color: hsl(255, 11%, 22%);
-  width: 600px;
-  margin-top: 120px;
 }
 
 .intro-features-content p {
   display: inline-block;
   float: left;
-  clear: left;
   margin-top: 10px;
   color: hsl(0, 0%, 75%);
-  width: 490px;
   font-weight: 500;
 }
 
 .btn-get-start {
   float: left;
-  clear: left;
   padding: 15px 42px;
-  margin-top: 40px;
   font-size: 20px;
   border-radius: 30px;
+  margin-top: 40px;
 }
 
 #intro-content #shortly-link-form {
   position: absolute;
-  padding: 50px 50px 0px 50px;
-  min-height: 118px;
-  left: 0;
-  bottom: calc(-168px / 2);
   background-color: hsl(257, 27%, 26%);
-  background-image: url("../images/bg-shorten-desktop.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   border-radius: 10px;
-  width: calc(100% - 100px);
+}
+
+#shortly-link-form .inputext-side {
+  float: left;
 }
 
 #shortly-link-form input[type=text] {
-    padding: 20px;
-    float: left;
-    height: calc(68px - 40px - 6px);
-    width: calc(770px - 40px - 6px);
     font-size: 18px;
     border-radius: 10px;
 }
@@ -200,20 +161,15 @@ header #account {
 }
 
 #shortly-link-form button {
-  float: right;
-  width: calc(100% - 770px - 20px);
-  height: 68px;
   border-radius: 10px;
-  font-size: 24px;
   border: none;
   outline: none;
 }
 
 #shortly-link-form #input-error-message{
   color: hsl(0, 87%, 67%);
-  font-size: 14px;
   font-weight: 500;
-  margin-top: 5px;
+  width: 100%;
   display: inline-block;
   float: left;
   font-style: italic;
@@ -231,9 +187,8 @@ header #account {
   color: hsl(0, 87%, 67%);
 }
 
-
-
 /*--LINK-SHORTEN-END---------------------------------------------------------*/
+
 /*--INTRO-SERVICE-SECTION-START---------------------------------------------------------*/
 #intro-service-section {
   background-color: #EFF1F7;
@@ -246,38 +201,24 @@ header #account {
 
 .service-introduce-content h2 {
   color: hsl(255, 11%, 22%);
-  margin-bottom: 15px;
-  font-size: 38px;
 }
 
 .service-introduce-content p {
   color: hsl(257, 7%, 63%);
   font-weight: 300;
-  width: 500px;
-  margin: 0 calc((100% - 500px) / 2)
 }
 
 .service-list-box {
-  height: 350px;
   margin-top: 100px;
-  margin-bottom: 120px;
 }
 
 .service-list-box .service-detail {
-  float: left;
-  padding: 75px 30px 40px 30px;
-  width: calc(350px - 60px);
-  height: calc(270px - 75px - 40px);
   background-color: white;
   border-radius: 10px;
   position: relative;
 }
 
 .margin-line {
-  float: left;
-  width: 30px;
-  height: 8px;
-  margin-top: 150px;
   background-color: hsl(180, 66%, 49%);
 }
 
@@ -289,37 +230,27 @@ header #account {
   border-radius: 45px;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  top: calc(-90px / 2);
-  left: 30px;
 }
 
 .service-detail h3 {
   color: hsl(255, 11%, 22%);
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
 .service-detail p {
+  color: hsl(0, 0%, 75%);
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #brand-recognition .service-icon {
   background-image: url("../images/icon-brand-recognition.svg");
 }
 
-#detailed-records {
-  margin-top: 40px;
-}
-
 #detailed-records .service-icon {
   background-image: url("../images/icon-detailed-records.svg");
-}
-
-#fully-customizable {
-  margin-top: 80px;
 }
 
 #fully-customizable .service-icon {
@@ -332,9 +263,7 @@ header #account {
 /*--BOOST-SECTION-START---------------------------------------------------------*/
 
 #boost-section {
-  height: 250px;
   background-color: hsl(257, 27%, 26%);
-  background-image: url("../images/bg-boost-desktop.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -343,8 +272,6 @@ header #account {
 
 .boost-box h2 {
   color: white;
-  margin-top: 50px;
-  font-size: 38px;
 }
 
 .boost-box .btn-get-start {
@@ -360,18 +287,15 @@ header #account {
 footer {
   background-color: hsl(260, 8%, 14%);
   padding-top: 70px;
-  height: calc(300px - 70px);
+  min-height: calc(300px - 70px);
 }
 
 footer #logo-footer {
-  float: left;
-  margin-right: 230px;
+  /* Responsive */
 }
 
 footer .nav-footer {
-  float: left;
-  width: 150px;
-  margin-left: 30px;
+  /* Responsive */
 }
 
 .nav-footer h4 {
@@ -406,16 +330,12 @@ footer .nav-footer {
 }
 
 footer .share-nav {
-  float: right;
-  width: 200px;
+  /* Responsive */
 }
 
 .share-nav ul {
   list-style-type: none;
-  float: left;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
 }
 
 .share-nav ul li {
@@ -468,10 +388,8 @@ footer .share-nav {
 
 /*--FOOTER-END---------------------------------------------------------*/
 
-
 /*--SHORTEN-RESULT-START---------------------------------------------------------*/
 #results-list-box {
-  margin-top: 110px;
   min-height: 1px;
   overflow: auto;
 }
@@ -479,27 +397,16 @@ footer .share-nav {
 #results-list-box ul {
   display: block;
   list-style-type: none;
-  float: left;
-  padding: 0;
-  margin: 0;
-  width: 100%;
 }
 
 #results-list-box ul li {
   display: block;
   float: left;
   padding: 0;
-  margin: 15px 0 0 0;
   width: 100%;
 }
 
-.clear {
-  clear: both;
-}
-
 .result-box {
-  padding: 15px 30px;
-  width: calc(100% - 60px);
   overflow: auto;
   background-color: white;
   border-radius: 5px;
@@ -508,7 +415,7 @@ footer .share-nav {
 .result-box p {
   display: block;
   padding: 6px 0px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .result-box .original-link {
@@ -516,17 +423,15 @@ footer .share-nav {
 }
 
 .result-box .copy-result-box {
-  float: right;
+  /* Responsive */
 }
 
 .copy-result-box .shorten-link {
   float: left;
-  margin-right: 25px;
   color: hsl(180, 66%, 49%);
 }
 
 .copy-result-box .btn-copy {
-  width: 100px;
   padding: 9px 0px;
   border-radius: 5px;
   float: left;
@@ -543,23 +448,3 @@ footer .share-nav {
 }
 
 /*--SHORTEN-RESULT-END---------------------------------------------------------*/
-
-/*
-### Primary
-
-- Cyan: hsl(180, 66%, 49%)
-- Dark Violet: hsl(257, 27%, 26%)
-
-### Secondary
-
-- Red: hsl(0, 87%, 67%)
-
-### Neutral
-
-- Gray: hsl(0, 0%, 75%)
-- Grayish Violet: hsl(257, 7%, 63%)
-- Very Dark Blue: hsl(255, 11%, 22%)
-- Very Dark Violet: hsl(260, 8%, 14%)
-
-
-*/

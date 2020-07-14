@@ -87,7 +87,7 @@ function checkInputLink(originalLink) {
   if(originalLink == "") {
     return "Please add a link";
   } else if (!validateUlr(originalLink)) {
-    return "Invalid URL, please use this format: \"https://www.example.com\"";
+    return "Invalid URL (\"https://www.example.com\")";
   }
   return 0;
 }
@@ -237,4 +237,15 @@ Return: None
 */
 function deleteCookie(cname) {
   document.cookie = cname +"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+/*
+Name: showHideMenu(x)
+Description: Show hide menu
+Parameter: x
+Return: None
+*/
+function showHideMenu(x) {
+  x.classList.toggle("change");
+  document.getElementById("main-nav").classList.toggle("active-menu");
 }

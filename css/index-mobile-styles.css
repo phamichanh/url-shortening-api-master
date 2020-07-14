@@ -1,0 +1,329 @@
+@media only screen and (max-width: 768px) {
+  /* For Mobile (max 768px) */
+
+  .main-view {
+    width: 100%;
+  }
+
+  /*--HEADER-START---------------------------------------------------------*/
+  header {
+    height: 50px;
+    padding: 40px 0px 0px 0px;
+  }
+
+  header .main-view {
+    height: 100%;
+  }
+
+  header #logo-header {
+    margin-left: 20px;
+  }
+
+  /*--BUTTON-MENU-START---------------------------------------------------------*/
+
+  header #btn-show-hide-menu {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: hsl(257, 7%, 63%);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+/*--BUTTON-MENU-START---------------------------------------------------------*/
+
+  header #main-nav {
+    height: 0px;
+    transition: height 300ms;
+    overflow: hidden;
+    width: calc(100% - 80px);
+    padding: 0px 20px;
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  #main-nav.active-menu {
+    height: 380px;
+  }
+
+  header #nav-header {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  #nav-header ul {
+    list-style-type: none;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #nav-header ul li {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  #nav-header ul li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+  }
+
+  header #account {
+    border-top: 1px solid hsl(257, 7%, 63%);
+    float: left;
+    width: 100%;
+  }
+
+  #account .btn-login {
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  #account .btn-sign-up {
+    width: 100%;
+    padding: 15px 0px;
+    border-radius: 30px;
+  }
+
+
+  /*--HEADER-END---------------------------------------------------------*/
+
+  /*--LINK-SHORTEN-START---------------------------------------------------------*/
+  #link-shorten-section {
+    height: 850px;
+    background-size: auto 330px;
+    background-position-x: 25px;
+    background-position-y: 45px;
+  }
+
+  .intro-features-content h1 {
+    font-size: 38px;
+    line-height: 50px;
+    width: 100%;
+    margin-top: 410px;
+    text-align: center;
+  }
+
+  .intro-features-content p {
+    padding: 0px 20px 0px 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+
+  .btn-get-start {
+    clear: left;
+    margin-left: calc((100% - 202px) / 2);
+    margin-right: calc((100% - 202px) / 2);
+  }
+
+  #intro-content #shortly-link-form {
+    background-image: url("../images/bg-shorten-mobile.svg");
+    padding: 20px;
+    width: 295px;
+    min-height: 116px;
+    left: 20px;
+    bottom: calc(-156px / 2);
+  }
+
+  #shortly-link-form .inputext-side {
+    width: 100%;
+  }
+
+  #shortly-link-form input[type=text] {
+      padding: 15px;
+      float: left;
+      height: calc(48px - 30px - 6px);
+      width: calc(100% - 30px - 6px);
+  }
+
+  #shortly-link-form #input-error-message{
+    font-size: 10px;
+    margin-top: 0px;
+    height: 20px;
+  }
+
+  #shortly-link-form button {
+    float: left;
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  /*--LINK-SHORTEN-END---------------------------------------------------------*/
+
+  /*--INTRO-SERVICE-SECTION-START---------------------------------------------------------*/
+  .service-introduce-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .service-introduce-content p {
+    width: 300px;
+    margin: 0 calc((100% - 300px) / 2);
+    font-size: 16px;
+  }
+
+  .service-list-box {
+    height: auto;
+    margin-bottom: 80px;
+  }
+
+  .service-list-box .service-detail {
+    padding: 75px 30px 40px 30px;
+    width: calc(335px - 60px);
+    height: calc(270px - 75px - 40px);
+    margin: 45px auto 0px auto;
+    text-align: center;
+  }
+
+  .margin-line {
+    width: 8px;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  .service-detail .service-icon {
+    position: absolute;
+    top: calc(-90px / 2);
+    left: calc(245px / 2);
+  }
+
+
+  /*--INTRO-SERVICE-SECTION-END---------------------------------------------------------*/
+
+
+
+  /*--BOOST-SECTION-START---------------------------------------------------------*/
+
+  #boost-section {
+    height: 300px;
+    background-image: url("../images/bg-boost-mobile.svg");
+  }
+
+  .boost-box h2 {
+    font-size: 26px;
+    margin-top: 100px;
+  }
+
+  /*--BOOST-SECTION-END---------------------------------------------------------*/
+
+  /*--FOOTER-START---------------------------------------------------------*/
+
+  footer #logo-footer {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  footer .nav-footer {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  footer .share-nav {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .share-nav ul {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .share-nav ul li {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+  }
+
+  /*--FOOTER-END---------------------------------------------------------*/
+
+  /*--SHORTEN-RESULT-START---------------------------------------------------------*/
+  #results-list-box {
+    margin-top: 90px;
+  }
+
+  #results-list-box p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #results-list-box ul {
+    float: left;
+    padding: 0 20px 0 20px;
+    margin: 0;
+    width: calc(100% - 40px);
+  }
+
+  #results-list-box ul li {
+    margin: 20px 0 0 0;
+  }
+
+  .result-box {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
+
+  .result-box p {
+    width: 100%;
+  }
+
+  .result-box .original-link {
+    margin-bottom: 10px;
+  }
+
+  .result-box .copy-result-box {
+    float: left;
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 75%);
+  }
+
+  .copy-result-box .shorten-link {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .copy-result-box .btn-copy {
+    width: 100%;
+  }
+
+  /*--SHORTEN-RESULT-END---------------------------------------------------------*/
+
+}
